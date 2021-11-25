@@ -1,0 +1,148 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.12rem;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--very-dark-blue-main);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+#card__outer {
+  margin: 0 auto;
+  color: white;
+  max-width: 80vw;
+  background-color: var(--very-dark-blue-card);
+  border-radius: 1.5rem;
+}
+
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.card__inner #productImage {
+  max-width: 20rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.onhov {
+  position: absolute;
+  height: 50%;
+  background-color: var(--cyan);
+}
+
+.card__inner .card__desc {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.card__desc #headline {
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card__desc #headline:hover {
+  color: var(--cyan);
+}
+
+.card__desc #description {
+  color: var(--soft-blue);
+}
+
+.card__desc .card__stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__desc .card__stats #price {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.card__desc .card__stats #date {
+  color: var(--soft-blue);
+  font-weight: 400;
+}
+
+.card__desc .card__stats img {
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.card__inner .creds {
+  display: flex;
+  justify-content: start;
+  padding: 0 1.5rem;
+  width: 100%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card__inner .creds img {
+  width: 45px;
+  margin-right: 1rem;
+  outline: 1px solid white;
+  border-radius: 50%;
+}
+
+.card__inner .creds #tag {
+  color: var(--soft-blue);
+}
+
+.card__inner .creds #auth {
+  cursor: pointer;
+}
+.card__inner .creds #auth:hover {
+  color: var(--cyan);
+}
+
+@media screen and (min-width: 726px) {
+  #card__outer {
+    min-width: 14vw;
+  }
+  .card__inner #productImage {
+    max-width: 30rem;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  #card__outer {
+    max-width: 60vw;
+  }
+}
